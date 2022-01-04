@@ -9,7 +9,8 @@ enum ServerStatus {
 
 class SocketService with ChangeNotifier {
   ServerStatus _serverStatus = ServerStatus.Connecting;
-  final IO.Socket _socket = IO.io('http://192.168.1.11:3000', {
+  // final IO.Socket _socket = IO.io('http://192.168.1.11:3000', {
+  final IO.Socket _socket = IO.io('https://paucar-flutter-socket-server.herokuapp.com/', {
     'transports': ['websocket'],
     'autoConnect': true
   });
